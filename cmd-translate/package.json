@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev src/cli.ts -h"
+    "start": "ts-node-dev src/cli.ts hello"
   },
   "license": "MIT",
   "dependencies": {
