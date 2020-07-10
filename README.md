@@ -1,3 +1,5 @@
+> 因百度翻译接口需按量付费，所以目前翻译接口已被我自行关闭
+
 ## sunny-translate 项目介绍
 
 sunny-translate 是一个基于 Commander.js 和 Http Request 的命令行翻译工具。

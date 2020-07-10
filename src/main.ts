@@ -2,7 +2,6 @@ import * as querystring from 'querystring';
 import md5 = require('md5');
 import {appId, appSecret} from './private';
 import * as http from 'http';
-
 const https = require('https');
 
 //表驱动编程,错误提示
