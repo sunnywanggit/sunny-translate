@@ -2,6 +2,9 @@
   "name": "cmd-translate",
   "version": "0.0.1",
   "main": "index.js",
+  "bin": {
+
+  },
   "scripts": {
     "start": "ts-node-dev src/cli.ts 你好"
   },
