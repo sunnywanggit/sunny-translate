@@ -10,8 +10,15 @@ errorMap = { 52001:'请求超时',52002: '系统错误', 52003: '用户未授权
 export const translate = (word) => {
     const salt = Math.random();
     const sign = md5(appId + word + salt + appSecret);
+    let from = 'en';
+    let to  = 'zh';
+    //输入的不是英文
+    if(! /[a-zA-Z]/.test(word[0])){
+        from = 'zh';
+        to = 'en';
+    }
     //使用 querystring 构造查询字符串
-    const query: string = querystring.stringify({ q: word, from: 'en', to: 'zh', appid: appId, salt: salt, sign: sign });
+    const query: string = querystring.stringify({ q: word, from, to, appid: appId, salt: salt, sign: sign });
 
     const options = { hostname: 'fanyi-api.baidu.com', port: 443, path: '/api/trans/vip/translate?' + query, method: 'GET' };
 
